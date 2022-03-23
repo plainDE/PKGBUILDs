@@ -1,0 +1,11 @@
+# Maintainer: Ivan Bushchik <ivabus@plainde.org> and thm-unix 
+<segfault@plainde.org>
+
+pkgname=plainpanel
+pkgver=0.0.1
+pkgrel=1
+pkgdesc='plainDE main panel'
+arch=('x86_64', 'aarch64')
+usr='https://plainde.org'
+license=('GPL')
+makedepends=(qmake qt5)
