@@ -1,5 +1,4 @@
-# Maintainer: Ivan Bushchik <ivabus@plainde.org> and thm-unix 
-<segfault@plainde.org>
+# Maintainer: Ivan Bushchik <ivabus@plainde.org> and thm-unix <segfault@plainde.org>
 
 pkgname=plainpanel
 pkgver=0.0.1
