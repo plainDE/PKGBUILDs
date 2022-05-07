@@ -23,5 +23,5 @@ build() {
 
 package() {
   mv plainPanel "$pkgdir"/usr/plainDE/
-  ln -sf "$pkgdir"/usr/plainDE/plainPanel "$pkgdir"/usr/bin/plainPanel
+  ln -s "$pkgdir"/usr/plainDE/plainPanel "$pkgdir"/usr/bin/plainPanel
 }
