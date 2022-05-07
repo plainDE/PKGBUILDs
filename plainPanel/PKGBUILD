@@ -10,9 +10,6 @@ makedepends=(git make)
 source=("git+https://github.com/plainDE/plainPanel.git#tag=v${pkgver}")
 sha256sums=('SKIP')
 
-prepare() {
-	echo '...'
-}
 
 build() {
 	cd plainPanel
@@ -21,4 +18,8 @@ build() {
 	
 	mv ./plainPanel /usr/share/plainDE/
 	ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
+}
+
+package() {
+	echo "..."
 }
