@@ -16,7 +16,8 @@ build() {
 	qmake
 	make
 	
-	mv ./plainPanel /usr/share/plainDE/
+	ls
+	pwd
 	ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
 }
 
