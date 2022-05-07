@@ -18,8 +18,7 @@ build() {
 }
 
 package() {
-	pwd
-	#sudo mkdir /usr/share/plainDE
-	#sudo mv ./plainPanel /usr/share/plainDE/plainPanel
-	#sudo ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
+	sudo mkdir /usr/share/plainDE
+	sudo mv plainPanel/plainPanel /usr/share/plainDE/plainPanel
+	sudo ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
 }
