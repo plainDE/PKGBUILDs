@@ -19,6 +19,7 @@ build() {
 }
 
 package() {
+  mkdir /usr/plainDE/
   mv plainPanel "$pkgdir"/usr/plainDE/
   ln -s "$pkgdir"/usr/plainDE/plainPanel "$pkgdir"/usr/bin/plainPanel
 }
