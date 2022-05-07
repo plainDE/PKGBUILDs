@@ -15,12 +15,10 @@ build() {
 	cd plainPanel
 	qmake
 	make
-	
-	sudo mkdir /usr/share/plainDE
-	sudo mv ./plainPanel /usr/share/plainDE/plainPanel
-	sudo ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
 }
 
 package() {
-	echo "..."
+	sudo mkdir /usr/share/plainDE
+	sudo mv ./plainPanel /usr/share/plainDE/plainPanel
+	sudo ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
 }
