@@ -1,24 +1,25 @@
+# Maintainer: Ivan 'ivabus' Bushchik ivabus@ivabus.dev -> https://github.com/ivabus
+
 pkgname=plainPanel
 pkgver=0.1
 pkgrel=1
-pkgdesc="Lightweight panel for OpenBox/FluxBox/..."
+pkgdesc="plainDE panel"
 arch=(x86_64 i686 arm armv6h armv7h aarch64)
 url="https://plainde.org"
 license=(GPL3)
-depends=(qt6-base noto-fonts-emoji polkit ttf-opensans alsa-utils kwindowsystem)
-makedepends=(git make)
+depends=(qt6-base noto-fonts-emoji polkit ttf-opensans make alsa-utils kwindowsystem)
+makedepends=(git)
 source=("git+https://github.com/plainDE/plainPanel.git#tag=v${pkgver}")
 sha256sums=('SKIP')
 
-
 build() {
-	cd plainPanel
-	qmake
-	make
+  cd $srcdir/plainPanel
+  qmake
+  make
 }
 
 package() {
-	mkdir "${pkgdir}/usr/share/plainDE"
-	mv plainPanel/plainPanel "${pkgdir}/usr/share/plainDE/plainPanel"
-	ln -s "${pkgdir}/usr/share/plainDE/plainPanel "${pkgdir}/usr/bin/plainPanel"
+  mkdir -p $pkgdir/usr/share/plainDE/ $pkgdir/usr/bin
+  mv $srcdir/plainPanel/plainPanel $pkgdir/usr/share/plainDE/
+  ln -s $pkgdir/usr/share/plainDE/plainPanel $pkgdir/usr/bin/plainPanel
 }
