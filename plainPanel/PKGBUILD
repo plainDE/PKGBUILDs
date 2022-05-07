@@ -13,7 +13,7 @@ source=("git+https://github.com/plainDE/plainPanel.git#tag=v${pkgver}")
 sha256sums=('SKIP')
 
 prepare() {
-  cd plainPanel
+  cd src/plainPanel
 }
 
 build() {
