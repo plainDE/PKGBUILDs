@@ -1,0 +1,19 @@
+pkgname=plainPanel
+pkgver=0.1
+pkgdesc="Lightweight panel for OpenBox/FluxBox/..."
+arch=(x86_64 i686)
+url="https://plainde.org"
+license=(GPL3)
+depends=(qt6-base noto-fonts-emoji polkit ttf-opensans alsa-utils kwindowsystem)
+makedepends=(git make)
+source=("git+https://github.com/plainDE/plainPanel.git#tag=v${pkgver}")
+sha256sums=('SKIP')
+
+build() {
+	cd plainPanel
+	qmake
+	make
+	
+	mv ./plainPanel /usr/share/plainDE/
+	ln -s /usr/share/plainDE/plainPanel /usr/bin/plainPanel
+}
