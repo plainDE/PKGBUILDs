@@ -11,8 +11,8 @@ depends=(qt6-base noto-fonts-emoji polkit ttf-opensans make alsa-utils kwindowsy
 makedepends=(git)
 source=("git+https://github.com/plainDE/plainPanel.git#tag=v${pkgver}")
 sha256sums=('SKIP')
-optdepends=("plainControlCenter - Edit config from AUR"
-            "plainAbout - About Screen from AUR")
+optdepends=("plainControlCenter: Edit config from AUR"
+            "plainAbout: About Screen from AUR")
 
 build() {
   cd $srcdir/plainPanel
