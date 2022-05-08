@@ -1,7 +1,7 @@
 # Maintainer: Ivan 'ivabus' Bushchik ivabus@ivabus.dev -> https://github.com/ivabus
 
-pkgname=plainControlCenter
-pkgver=0.1
+pkgname=plaincontrolcenter
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="plainDE panel"
 arch=(x86_64 i686 arm armv6h armv7h aarch64)
