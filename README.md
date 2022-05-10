@@ -1,4 +1,4 @@
-# Arch Linux PKGBUILDs
+# plainDE PKGBUILDs
 
 Now ready and on AUR:
 - `plainpanel`
