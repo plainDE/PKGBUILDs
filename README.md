@@ -8,4 +8,4 @@ Now ready and on AUR:
 
 Note: `plainde-meta` is only used to install `plainpanel`, `plaincontrolcenter` and `plainabout` at once.
 
-In work: `\*-git` and `\*-bin` packages.
+WIP: `*-git` and `*-bin` packages.
