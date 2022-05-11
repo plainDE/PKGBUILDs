@@ -1,6 +1,7 @@
 # Maintainer: Ivan 'ivabus' Bushchik ivabus@ivabus.dev -> https://github.com/ivabus
 
 pkgname=plaincontrolcenter-git
+pkgver=1
 pkgrel=1
 pkgdesc="plainDE control center"
 arch=(x86_64 i686 arm armv6h armv7h aarch64)
@@ -13,7 +14,8 @@ sha256sums=('SKIP')
 conflicts=('plaincontrolcenter')
 
 pkgver() {
-  date +%Y%m%d
+  cd $srcdir/plainControlCenter
+  git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build() {
