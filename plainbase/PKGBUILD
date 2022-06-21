@@ -8,10 +8,13 @@ arch=(x86_64 i686 arm armv6h armv7h aarch64)
 url="https://plainde.org"
 license=(GPL3)
 makedepends=(git)
-source=("git+https://github.com/plainDE/plainBase.git#tag=${pkgver}")
-sha256sums=('SKIP')
+source=("git+https://github.com/plainDE/plainBase.git#tag=${pkgver}"
+        "git+https://github.com/plainDE/plainArtwork.git")
+sha256sums=('SKIP'
+            'SKIP')
 
 package() {
   mkdir -p $pkgdir/usr
   cp -r $srcdir/plainBase/usr/* $pkgdir/usr/
+  cp -r $srcdir/plainArtwork/flags $pkgdir/usr/share/
 }
